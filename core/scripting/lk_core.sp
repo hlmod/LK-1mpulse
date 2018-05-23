@@ -9,7 +9,7 @@
 
 public Plugin myinfo =
 {
-	name = "[Личный Кабинет] Core [PRIVATE]",
+	name = "[Личный Кабинет] Core",
 	author = "1mpulse (skype:potapovdima1)",
 	version = VERSION_PLUGIN,
 	url = "https://plugins.thebestcsgo.ru"
