@@ -16,15 +16,15 @@ CSGO / CSS (OB)
 Так же вы можете настроить автопополнение через такие сервисы как: DigiSeller, Free-Kassa и т.п. (для этого нужен отдельный модуль)
 
 Скрины:
-https://plugins.thebestcsgo.ru/include/images/lk1.jpg
-https://plugins.thebestcsgo.ru/include/images/lk2.jpg
-https://plugins.thebestcsgo.ru/include/images/lk3.jpg
+- https://plugins.thebestcsgo.ru/include/images/lk1.jpg
+- https://plugins.thebestcsgo.ru/include/images/lk2.jpg
+- https://plugins.thebestcsgo.ru/include/images/lk3.jpg
 
 Команды:
-sm_lk - Открыть меню ЛК
-sm_lkhelp - Напечатает в консоль всю информацию о командах плагина
-sm_lkkey "ключ" - Активация ключа
-sm_lkrub "add/take/set" "#userid" "руб"
-sm_lkkeysadd "кол-во 1-100" "руб" - добавить/создать LK ключи
-sm_lkkeysdel [key] - удалить все LK ключи или только 1
-sm_lkkeysdump - информация о всех LK ключах в configs/lk/keys/lkkeys_dump.txt
+- sm_lk - Открыть меню ЛК
+- sm_lkhelp - Напечатает в консоль всю информацию о командах плагина
+- sm_lkkey "ключ" - Активация ключа
+- sm_lkrub "add/take/set" "#userid" "руб"
+- sm_lkkeysadd "кол-во 1-100" "руб" - добавить/создать LK ключи
+- sm_lkkeysdel [key] - удалить все LK ключи или только 1
+- sm_lkkeysdump - информация о всех LK ключах в configs/lk/keys/lkkeys_dump.txt
