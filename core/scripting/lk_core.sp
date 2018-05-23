@@ -5,7 +5,7 @@
 #include <colors>
 #include <sdktools>
 
-#define VERSION_PLUGIN "4.0.1"
+#define VERSION_PLUGIN "4.0.2"
 
 public Plugin myinfo =
 {
@@ -33,11 +33,7 @@ public void OnPluginStart()
 	CreateForwardss();
 	RegAllCmds();
 	
-	switch(GetEngineVersion())
-	{
-		case Engine_CSGO: GameCSGO = true;
-		case Engine_CSS: GameCSGO = false;
-	}
+	GameCSGO = (GetEngineVersion() == Engine_CSGO);
 }
 
 public void OnMapStart()

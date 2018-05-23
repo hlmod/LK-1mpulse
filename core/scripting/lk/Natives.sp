@@ -1,6 +1,5 @@
 public APLRes AskPluginLoad2(Handle hMyself, bool bLate, char[] sError, int iErr_max) 
 {
-	RegPluginLibrary("lk");
 	CreateNative("LK_GetDatabase", LK_GetDatabase_);
 	CreateNative("LK_RegisterItem", LK_RegisterItem_);
 	CreateNative("LK_UnRegisterItem", LK_UnRegisterItem_);
@@ -20,6 +19,7 @@ public APLRes AskPluginLoad2(Handle hMyself, bool bLate, char[] sError, int iErr
 	CreateNative("LK_GetVersion", LK_GetVersion_);
 	CreateNative("LK_GetMainMenuTitle", LK_GetMainMenuTitle_);
 	CreateNative("LK_GetCurrency", LK_GetCurrency_);
+	RegPluginLibrary("lk");
 	return APLRes_Success;
 }
 
@@ -62,66 +62,101 @@ public int LK_UnRegisterItem_(Handle hPlugin, int iNumParams)
 public int LK_ShowMainMenu_(Handle hPlugin, int iNumParams)
 {
 	int iClient = GetNativeCell(1);
-	LK_ShowMainMenu(iClient);
+	if(IsValidPlayer(iClient)) LK_ShowMainMenu(iClient);
+	else LogError("LK_ShowMainMenu ошибка: Игрок не найден");
 }
 
 public int LK_GetClientCash_(Handle hPlugin, int iNumParams)
 {
 	int iClient = GetNativeCell(1);
-	return g_iClientInfo[iClient][Client_Cash];
+	if(IsValidPlayer(iClient)) return g_iClientInfo[iClient][Client_Cash];
+	else
+	{
+		LogError("LK_GetClientCash ошибка: Игрок не найден");
+		return -1;
+	}
 }
 
 public int LK_SetClientCash_(Handle hPlugin, int iNumParams)
 {
 	int iClient = GetNativeCell(1);
 	int amount = GetNativeCell(2);
-	g_iClientInfo[iClient][Client_Cash] = amount;
-	SavePlayer(iClient);
+	if(!IsValidPlayer(iClient)) LogError("LK_SetClientCash ошибка: Игрок не найден");
+	else
+	{
+		g_iClientInfo[iClient][Client_Cash] = amount;
+		SavePlayer(iClient);
+	}
 }
 
 public int LK_AddClientCash_(Handle hPlugin, int iNumParams)
 {
 	int iClient = GetNativeCell(1);
 	int amount = GetNativeCell(2);
-	g_iClientInfo[iClient][Client_Cash] += amount;
-	SavePlayer(iClient);
+	if(!IsValidPlayer(iClient)) LogError("LK_AddClientCash ошибка: Игрок не найден");
+	else
+	{
+		g_iClientInfo[iClient][Client_Cash] += amount;
+		SavePlayer(iClient);
+	}
 }
 
 public int LK_TakeClientCash_(Handle hPlugin, int iNumParams)
 {
 	int iClient = GetNativeCell(1);
 	int amount = GetNativeCell(2);
-	g_iClientInfo[iClient][Client_Cash] -= amount;
-	if(g_iClientInfo[iClient][Client_Cash] < 0) g_iClientInfo[iClient][Client_Cash] = 0;
-	SavePlayer(iClient);
+	if(!IsValidPlayer(iClient)) LogError("LK_TakeClientCash ошибка: Игрок не найден");
+	else
+	{
+		g_iClientInfo[iClient][Client_Cash] -= amount;
+		if(g_iClientInfo[iClient][Client_Cash] < 0) g_iClientInfo[iClient][Client_Cash] = 0;
+		SavePlayer(iClient);
+	}
 }
 
 public int LK_ResetClientCash_(Handle hPlugin, int iNumParams)
 {
 	int iClient = GetNativeCell(1);
-	g_iClientInfo[iClient][Client_Cash] = 0;
-	SavePlayer(iClient);
+	if(!IsValidPlayer(iClient)) LogError("LK_ResetClientCash ошибка: Игрок не найден");
+	else
+	{
+		g_iClientInfo[iClient][Client_Cash] = 0;
+		SavePlayer(iClient);
+	}
 }
 
 public int LK_GetClientAllCash_(Handle hPlugin, int iNumParams)
 {
 	int iClient = GetNativeCell(1);
-	return g_iClientInfo[iClient][Client_AllCash];
+	if(IsValidPlayer(iClient)) return g_iClientInfo[iClient][Client_AllCash];
+	else
+	{
+		LogError("LK_GetClientAllCash ошибка: Игрок не найден");
+		return -1;
+	}
 }
 
 public int LK_AddClientAllCash_(Handle hPlugin, int iNumParams)
 {
 	int iClient = GetNativeCell(1);
 	int amount = GetNativeCell(2);
-	g_iClientInfo[iClient][Client_AllCash] += amount;
-	SavePlayer(iClient);
+	if(!IsValidPlayer(iClient)) LogError("LK_AddClientAllCash ошибка: Игрок не найден");
+	else
+	{
+		g_iClientInfo[iClient][Client_AllCash] += amount;
+		SavePlayer(iClient);
+	}
 }
 
 public int LK_ResetClientAllCash_(Handle hPlugin, int iNumParams)
 {
 	int iClient = GetNativeCell(1);
-	g_iClientInfo[iClient][Client_AllCash] = 0;
-	SavePlayer(iClient);
+	if(!IsValidPlayer(iClient)) LogError("LK_ResetClientAllCash ошибка: Игрок не найден");
+	else
+	{
+		g_iClientInfo[iClient][Client_AllCash] = 0;
+		SavePlayer(iClient);
+	}
 }
 
 public int LK_LogMessage_(Handle hPlugin, int iNumParams)
@@ -156,8 +191,7 @@ public int LK_PrintToChatAll_(Handle hPlugin, int iNumParams)
 
 public int LK_GameCMS_Mode_(Handle hPlugin, int iNumParams)
 {
-	if(cfg_bGameCMS) return true;
-	else return false;
+	return cfg_bGameCMS;
 }
 
 public int LK_GetVersion_(Handle hPlugin, int iNumParams)

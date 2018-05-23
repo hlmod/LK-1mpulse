@@ -10,7 +10,7 @@ void RegAllCmds()
 
 public Action sm_lk(int iClient, int iArgs)
 {
-	LoadPlayerMenu(iClient);
+	LoadPlayer(iClient, true);
 	return Plugin_Handled;
 }
 

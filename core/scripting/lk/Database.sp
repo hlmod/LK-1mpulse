@@ -24,23 +24,15 @@ void pDatabase()
 	g_hDatabase.SetCharset("utf8");
 }
 
-void LoadPlayer(int iClient) 
+void LoadPlayer(int iClient, bool bMenu = false)
 {
-	if(IsValidPlayer(iClient))
-	{
-		if(cfg_bGameCMS)
-		{
-			char szQuery[256];
-			FormatEx(szQuery, sizeof(szQuery), "SELECT `shilings` FROM `users` WHERE `steam_id` = '%s'", g_SteamID[iClient]);
-			g_hDatabase.Query(SQL_Callback_LoadPlayer, szQuery, GetClientUserId(iClient), DBPrio_High);
-		}
-		else
-		{
-			char szQuery[256];
-			FormatEx(szQuery, sizeof(szQuery), "SELECT `cash`, `all_cash` FROM `lk` WHERE `auth` = '%s'", g_SteamID[iClient]);
-			g_hDatabase.Query(SQL_Callback_LoadPlayer, szQuery, GetClientUserId(iClient), DBPrio_High);
-		}
-	}
+	if(!IsValidPlayer(iClient)) return;
+	char szQuery[128];
+	if(cfg_bGameCMS) FormatEx(szQuery, sizeof(szQuery), "SELECT `shilings` FROM `users` WHERE `steam_id` = '%s'", g_SteamID[iClient]);
+	else FormatEx(szQuery, sizeof(szQuery), "SELECT `cash`, `all_cash` FROM `lk` WHERE `auth` = '%s'", g_SteamID[iClient]);
+	
+	if(bMenu) g_hDatabase.Query(SQL_Callback_LoadPlayerMenu, szQuery, GetClientUserId(iClient), DBPrio_High);
+	else g_hDatabase.Query(SQL_Callback_LoadPlayer, szQuery, GetClientUserId(iClient), DBPrio_High);
 }
 
 public void SQL_Callback_LoadPlayer(Database hDatabase, DBResultSet hResults, const char[] sError, any iUserID)
@@ -108,25 +100,6 @@ void SavePlayer(int iClient)
 			g_hDatabase.Escape(szQuery, szName, sizeof(szName));
 			FormatEx(szQuery, sizeof(szQuery), "UPDATE `lk` SET `cash` = '%i', `all_cash` = '%i', `name` = '%s' WHERE `auth` = '%s'", g_iClientInfo[iClient][Client_Cash], g_iClientInfo[iClient][Client_AllCash], szName, g_SteamID[iClient]);
 			g_hDatabase.Query(SQL_Callback_CheckError, szQuery, _, DBPrio_High);
-		}
-	}
-}
-
-void LoadPlayerMenu(int iClient) 
-{
-	if(IsValidPlayer(iClient))
-	{
-		if(cfg_bGameCMS)
-		{
-			char szQuery[256];
-			FormatEx(szQuery, sizeof(szQuery), "SELECT `shilings` FROM `users` WHERE `steam_id` = '%s'", g_SteamID[iClient]);
-			g_hDatabase.Query(SQL_Callback_LoadPlayerMenu, szQuery, GetClientUserId(iClient), DBPrio_High);
-		}
-		else
-		{
-			char szQuery[256];
-			FormatEx(szQuery, sizeof(szQuery), "SELECT `cash`, `all_cash` FROM `lk` WHERE `auth` = '%s'", g_SteamID[iClient]);
-			g_hDatabase.Query(SQL_Callback_LoadPlayerMenu, szQuery, GetClientUserId(iClient), DBPrio_High);
 		}
 	}
 }

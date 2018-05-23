@@ -33,19 +33,20 @@ void LK_ShowMainMenu(int iClient)
 	}
 }
 
-public int MenuHandler_MyPanel(Handle hMenu, MenuAction action, int iClient, int iSlot)
+public int MenuHandler_MyPanel(Menu hMenu, MenuAction action, int iClient, int iItem)
 {
+	delete hMenu;
 }
 
-public int ShowMainMenu_CallBack(Handle menu, MenuAction action, iClient, Item)
+public int ShowMainMenu_CallBack(Menu hMenu, MenuAction action, int iClient, int iItem)
 {
-	if(action == MenuAction_End) CloseHandle(menu);
-	else
+	switch(action)
 	{
-		if (action == MenuAction_Select)
-		{
+		case MenuAction_End: delete hMenu;
+		case MenuAction_Select:
+        {
 			char sInfo[128], sBuffers[2][64];
-			GetMenuItem(menu, Item, sInfo, sizeof(sInfo));
+			hMenu.GetItem(iItem, sInfo, sizeof(sInfo));
 			ExplodeString(sInfo, ";", sBuffers, 2, 64);
 			int index = -1;
 			if((index = g_hFuncArray.FindString(sBuffers[1])) != -1)
@@ -64,6 +65,6 @@ public int ShowMainMenu_CallBack(Handle menu, MenuAction action, iClient, Item)
 					Call_Finish();
 				}
 			}
-		}
+        }
 	}
 }

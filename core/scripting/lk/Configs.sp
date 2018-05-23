@@ -15,8 +15,13 @@ void Load_KFG()
 	hKV.Rewind();
 	cfg_bGameCMS = hKV.GetNum("GameCMS", 0)?true:false;
 	cfg_bLogs = hKV.GetNum("logs", 1)?true:false;
-	char ui[32][32], uo[512];
+	char uo[512];
 	hKV.GetString("commands_open_menu", uo, sizeof(uo), "sm_lk");
-	int jl = ExplodeString(uo, ";", ui, 32, 32, false);
-	for(int i; i < jl; i++) RegConsoleCmd(ui[i], sm_lk);
+	int iPos;
+	while(iPos != -1) 
+	{
+		iPos = FindCharInString(uo, ';', true);
+		RegConsoleCmd(uo[iPos+1], sm_lk);
+		if(iPos != -1) uo[iPos] = 0;
+    }
 }

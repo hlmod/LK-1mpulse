@@ -1,7 +1,6 @@
 stock bool IsValidPlayer(int iClient)
 {
-	if(iClient && IsClientInGame(iClient) && !IsFakeClient(iClient)) return true;
-	return false;
+	return (iClient && IsClientInGame(iClient) && !IsFakeClient(iClient));
 }
 
 stock bool ItemNameAlreadyExist(const char[] ItemName)
@@ -52,7 +51,7 @@ stock void ClearArrays()
 	int iSize = g_hFuncArray.Length;
 	for(int i = 1; i < iSize; i+=2)
 	{
-		delete view_as<Handle>(g_hFuncArray.Get(i));
+		CloseHandle(view_as<Handle>(g_hFuncArray.Get(i)));
 	}
 	g_hFuncArray.Clear();
 }
