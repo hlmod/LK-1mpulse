@@ -1,0 +1,14 @@
+"Phrases"
+{
+	//Chat
+	"Remove_Client_VIP"
+	{
+		"ru"		"{GREEN}Вы успешно сбросили ваш доступ."
+		"en"		"{GREEN}You have successfully dropped your access."
+	}
+	"Cancel_Remove_Client_VIP"
+	{
+		"ru"		"{GREEN}Сброс доступа был отменен."
+		"en"		"{GREEN}Resetting the access has been canceled."
+	}
+}

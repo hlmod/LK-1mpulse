@@ -1,0 +1,30 @@
+"Phrases"
+{
+	//Chat
+	"Now_Admin"
+	{
+		"ru"		"{GREEN}Вы уже являетесь админом."
+		"en"		"{GREEN}You are already a administrator."
+	}
+	"Buy_Admin"
+	{
+		"#format"	"{1:i}"
+		"ru"		"{GREEN}Вы купили Админ доступ на {1} дней."
+		"en"		"{GREEN}You have purchased access to the Admin {1} days."
+	}
+	"Buy_Admin_Forever"
+	{
+		"ru"		"{GREEN}Вы купили Админ доступ навсегда."
+		"en"		"{GREEN}You have purchased access to the Admin forever."
+	}
+	"Buy_End"
+	{
+		"ru"		"{GREEN}Перезайдите на сервер для активации админки или ждите конца карты."
+		"en"		"{GREEN}Reconnect to the server admin to activate the card and wait for the end."
+	}
+	"Now_Admin_Servers"
+	{
+		"ru"		"{GREEN}Вы уже админ на одном из серверов."
+		"en"		"{GREEN}You have admin on one of the servers."
+	}
+}

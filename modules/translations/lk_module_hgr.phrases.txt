@@ -1,0 +1,35 @@
+"Phrases"
+{
+	//Chat
+	"Buy_Extended"
+	{
+		"ru"		"{GREEN}Вы продлили паутинку."
+		"en"		"{GREEN}You extended web."
+	}
+	"Buy_Time"
+	{
+		"ru"		"{GREEN}Вы купили паутинку."
+		"en"		"{GREEN}You bought web."
+	}
+	"Buy_Forever"
+	{
+		"ru"		"{GREEN}Вы купили паутинку навсегда."
+		"en"		"{GREEN}You bought web forever."
+	}
+	"Time_is_up"
+	{
+		"ru"		"{GREEN}Время доступа к паутинке заканчилось, купите заного !lk."
+		"en"		"{GREEN}The time for access to the spider web was over, buy it !lk."
+	}
+	"Take_HGR_Admin"
+	{
+		"#format"	"{1:N}"
+		"ru"		"{GREEN}Вы забрали паутинку у игрока {BLUE}{1}{GREEN}."
+		"en"		"{GREEN}You took away the spider's web from the player {BLUE}{1}{GREEN}."
+	}
+	"Alredy_Buy_Forever"
+	{
+		"ru"		"{GREEN}У вас уже доступ навсегда."
+		"en"		"{GREEN}You already have access forever."
+	}
+}

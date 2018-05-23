@@ -1,0 +1,37 @@
+"Phrases"
+{
+	//Chat
+	"VIP_AddTime"
+	{
+		"#format"	"{1:s},{2:i}"
+		"ru"		"{GREEN}Вы продлили {PURPLE}{1} {GREEN}на {LIGHTBLUE}{2} {GREEN}дней."
+		"en"		"{GREEN}You have extended {PURPLE}{1} {GREEN}on {LIGHTBLUE}{2} {GREEN}days."
+	}
+	"No_Buy"
+	{
+		"ru"		"{GREEN}Вы не можете менять группу. Свяжитесь с админом."
+		"en"		"{GREEN}You can not change the group. Contact admin."
+	}
+	"Already_Forever"
+	{
+		"ru"		"{GREEN}У вас уже есть доступ, навсегда."
+		"en"		"{GREEN}You already have access forever."
+	}
+	"No_Buy_Forever"
+	{
+		"ru"		"{GREEN}У вас временный доступ, сначало удалите его."
+		"en"		"{GREEN}You have temporary access, remove it first."
+	}
+	"Buy_Forever"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{GREEN}Вы купили {PURPLE}{1} {GREEN}навсегда."
+		"en"		"{GREEN}You bought {PURPLE}{1} {GREEN}forever."
+	}
+	"Buy_Time"
+	{
+		"#format"	"{1:s},{2:i}"
+		"ru"		"{GREEN}Вы купили {PURPLE}{1} {GREEN}на {LIGHTBLUE}{2} {GREEN}дней."
+		"en"		"{GREEN}You bought {PURPLE}{1} {GREEN}on {LIGHTBLUE}{2} {GREEN}days."
+	}
+}

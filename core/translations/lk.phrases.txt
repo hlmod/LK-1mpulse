@@ -1,0 +1,167 @@
+// CSGO - (CS:GO Colors INC); CSS - (Colors INC)
+// CSGO - {DEFAULT}, {RED}, {LIGHTPURPLE}, {GREEN}, {LIME}, {LIGHTGREEN}, {LIGHTRED}, {GRAY}, {LIGHTOLIVE}, {OLIVE}, {PURPLE}, {LIGHTBLUE}, {BLUE}
+// CSS - {default}, {green}, {yellow}, {lightgreen}, {red}, {blue}, {olive}
+"Phrases"
+{
+	"Chat_Prefix"
+	{
+		"ru"		"[{RED}Личный кабинет{DEFAULT}]"
+		"en"		"[{RED}Personal Area{DEFAULT}]"
+	}
+	"Currency"
+	{
+		"ru"		"руб."
+		"en"		"rub."
+	}
+	"MainMenu_Title"
+	{
+		"#format"	"{1:i},{2:T}"
+		"ru"		"-----[Личный Кабинет]-----\nУ вас на счету [{1} {2}]\n--------------------------------"
+		"en"		"-----[Personal Area]-----\nYou account money [{1} {2}]\n--------------------------------"
+	}
+	"No_Module"
+	{
+		"ru"		"{GREEN}Модулей не найдено, ЛК пуст."
+		"en"		"{GREEN}Modules not found, PA empty."
+	}
+	"Success_Key_Activated"
+	{
+		"#format"	"{1:s},{2:d},{3:T}"
+		"ru"		"{GREEN}Вы успешно пополнили счет ключем ({1}) на {2} {3}"
+		"en"		"{GREEN}You have successfully used of key ({1}) or {2} {3}"
+	}
+	"Balance_Add"
+	{
+		"#format"	"{1:N},{2:i},{3:T}"
+		"ru"		"{GREEN}Вы пополнили счет игроку {RED}{1} {GREEN}на {BLUE}{2} {GREEN}{3}"
+		"en"		"{GREEN}You have credited the player {RED}{1} {GREEN}to {BLUE}{2} {GREEN}{3}"
+	}
+	"Balance_Take"
+	{
+		"#format"	"{1:N},{2:i},{3:T}"
+		"ru"		"{GREEN}Вы забрали со счета игрока {RED}{1} {BLUE}{2} {GREEN}{3}"
+		"en"		"{GREEN}You have withdrawn from the player's account {RED}{1} {GREEN}to {BLUE}{2} {GREEN}{3}"
+	}
+	"Balance_Set"
+	{
+		"#format"	"{1:N},{2:i},{3:T}"
+		"ru"		"{GREEN}Вы установили счет игрока {RED}{1} {GREEN}на {BLUE}{2} {GREEN}{3}"
+		"en"		"{GREEN}You installed a player account {RED}{1} {GREEN}to {BLUE}{2} {GREEN}{3}"
+	}
+	"Not_Loaded"
+	{
+		"ru"		"{GREEN}В данный момент Личный Кабинет загружается, попробуйте чуть позже."
+		"en"		"{GREEN}At the moment, the Personal Area is loading, try a little later."
+	}
+	//Module
+	"top10"
+	{
+		"ru"		"ТОП10 Донатеров"
+		"en"		"TOP10 Donaters"
+	}
+	"upr_dostup_r1ko"
+	{
+		"ru"		"Управление VIP"
+		"en"		"VIP Managment"
+	}
+	"thc_rpg_lvl"
+	{
+		"ru"		"Покупка RPG лвл"
+		"en"		"Buy RPG lvl"
+	}
+	"thc_rpg_credits"
+	{
+		"ru"		"Покупка RPG кредитов"
+		"en"		"Buy RPG Credits"
+	}
+	"smrpg_lvl"
+	{
+		"ru"		"Покупка RPG лвл"
+		"en"		"Buy RPG lvl"
+	}
+	"smrpg_credits"
+	{
+		"ru"		"Покупка RPG кредитов"
+		"en"		"Buy RPG Credits"
+	}
+	"shop_credits"
+	{
+		"ru"		"Покупка SHOP кредитов"
+		"en"		"Buy SHOP Credits"
+	}
+	"pokupka_vip_ws"
+	{
+		"ru"		"Покупка VIP"
+		"en"		"Buy VIP"
+	}
+	"pokupka_vip_r1ko"
+	{
+		"ru"		"Покупка VIP"
+		"en"		"Buy VIP"
+	}
+	"pokupka_admin"
+	{
+		"ru"		"Покупка Админок"
+		"en"		"Buy Admin access"
+	}
+	"info_menu"
+	{
+		"ru"		"Информация"
+		"en"		"Info"
+	}
+	"command_module"
+	{
+		"ru"		"Прочие функции"
+		"en"		"our func"
+	}
+	"transfer_rub"
+	{
+		"ru"		"Перевод денег"
+		"en"		"Money transfer"
+	}
+	"ncrpg_lvl"
+	{
+		"ru"		"Покупка RPG лвл"
+		"en"		"Buy RPG lvl"
+	}
+	"ncrpg_credits"
+	{
+		"ru"		"Покупка RPG кредитов"
+		"en"		"Buy RPG Credits"
+	}
+	"tbc_stats"
+	{
+		"ru"		"Покупка TBC поинтов"
+		"en"		"Buy TBC Points"
+	}
+	"shop_gold"
+	{
+		"ru"		"Покупка SHOP голды"
+		"en"		"Buy SHOP Gold"
+	}
+	"hgr"
+	{
+		"ru"		"Покупка паутинки"
+		"en"		"Buy HOOK"
+	}
+	"wcs_private_race"
+	{
+		"ru"		"Покупка приватных расс"
+		"en"		"Buy WCS Private Race"
+	}
+	"wcs_vip"
+	{
+		"ru"		"Покупка WCS VIP"
+		"en"		"Buy WCS VIP"
+	}
+	"wcs_gold"
+	{
+		"ru"		"Покупка WCS Золото"
+		"en"		"Buy WCS Gold"
+	}
+	"wcs_lvl"
+	{
+		"ru"		"Покупка WCS лвл"
+		"en"		"Buy WCS LvL"
+	}
+}

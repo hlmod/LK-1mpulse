@@ -1,0 +1,45 @@
+"Phrases"
+{
+	//Chat
+	"Player_Disconnect"
+	{
+		"ru"		"{GREEN}Игрок не найден (вышел с сервера)."
+		"en"		"{GREEN}Player can not be found (disconnect)."
+	}
+	"Take_Print_To_Admin"
+	{
+		"#format"	"{1:N},{2:d}"
+		"ru"		"{GREEN}Вы успешно забрали со счета игрока {LIGHTRED}{1} {PURPLE}{2} {GREEN}руб."
+		"en"		"{GREEN}You have successfully taken away from the player's account {LIGHTRED}{1} {PURPLE}{2} {GREEN}rub."
+	}
+	"Take_Print_To_Client"
+	{
+		"#format"	"{1:N},{2:d}"
+		"ru"		"{GREEN}Админ {LIGHTRED}{1} {GREEN}забрал с вашего личного счета {PURPLE}{2} {GREEN}руб."
+		"en"		"{GREEN}Admin {LIGHTRED}{1} {GREEN} took from your personal account {PURPLE}{2} {GREEN}rub."
+	}
+	"Give_Print_To_Admin"
+	{
+		"#format"	"{1:N},{2:d}"
+		"ru"		"{GREEN}Вы успешно пополнили счет игрока {LIGHTRED}{1} {GREEN}на {PURPLE}{2} {GREEN}руб."
+		"en"		"{GREEN}You have successfully joined the player's account {LIGHTRED}{1} {GREEN}on {PURPLE}{2} {GREEN}rub."
+	}
+	"Give_Print_To_Client"
+	{
+		"#format"	"{1:N},{2:d}"
+		"ru"		"{GREEN}Админ {LIGHTRED}{1} {GREEN}пополнил ваш личный счет на {PURPLE}{2} {GREEN}руб."
+		"en"		"{GREEN}Admin {LIGHTRED}{1} {GREEN}fill up your personal account on {PURPLE}{2} {GREEN}rub."
+	}
+	"Reset_Print_To_Admin"
+	{
+		"#format"	"{1:N}"
+		"ru"		"{GREEN}Вы успешно обнулили {LIGHTRED}{1}"
+		"en"		"{GREEN}You have successfully zeroed {LIGHTRED}{1}"
+	}
+	"Reset_Print_To_Client"
+	{
+		"#format"	"{1:N}"
+		"ru"		"{GREEN}Админ {LIGHTRED}{1} {GREEN}обнулил ваш личный счет."
+		"en"		"{GREEN}Admin {LIGHTRED}{1} {GREEN} reset your personal account."
+	}
+}

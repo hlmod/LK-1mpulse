@@ -1,0 +1,10 @@
+"Phrases"
+{
+	//Chat
+	"Buy_WCSLvL"
+	{
+		"#format"	"{1:i}"
+		"ru"		"{GREEN}Вы успешно купили {PURPLE}{1} {GREEN}AmmoPack."
+		"en"		"{GREEN}You have successfully purchased {PURPLE}{1} {GREEN}AmmoPack."
+	}
+}

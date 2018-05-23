@@ -1,0 +1,15 @@
+"Phrases"
+{
+	//Chat
+	"U_Die"
+	{
+		"ru"		"{GREEN}Вы мертвы."
+		"en"		"{GREEN}You die."
+	}
+	"Succes_Buy"
+	{
+		"#format"	"{1:i}"
+		"ru"		"{GREEN}Вы успешно купили функцию за {RED}{1} {GREEN}руб."
+		"en"		"{GREEN}You die."
+	}
+}

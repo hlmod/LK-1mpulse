@@ -1,0 +1,10 @@
+"Phrases"
+{
+	//Chat
+	"Buy_LvL_THC"
+	{
+		"#format"	"{1:i}"
+		"ru"		"{GREEN}Вы успешно купили {PURPLE}{1} {GREEN}уровень(ей)."
+		"en"		"{GREEN}You have successfully purchased {PURPLE}{1} {GREEN}lvl."
+	}
+}

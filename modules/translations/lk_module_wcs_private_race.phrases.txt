@@ -1,0 +1,15 @@
+"Phrases"
+{
+	//Chat
+	"Buy_WCSPrivateRace"
+	{
+		"#format"	"{1:s}"
+		"ru"		"{GREEN}Вы успешно купили приватную рассу {PURPLE}{1}"
+		"en"		"{GREEN}You have successfully purchased private race {PURPLE}{1}"
+	}
+	"NoBuy_WCSPrivateRace"
+	{
+		"ru"		"{GREEN}У вас уже есть данная расса, купите другую."
+		"en"		"{GREEN}You already have this race, buy another."
+	}
+}

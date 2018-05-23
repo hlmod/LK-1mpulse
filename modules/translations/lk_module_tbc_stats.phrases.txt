@@ -1,0 +1,10 @@
+"Phrases"
+{
+	//Chat
+	"Buy_Points"
+	{
+		"#format"	"{1:i}"
+		"ru"		"{GREEN}Вы успешно купили {PURPLE}{1} {GREEN}TBC поинт(ов)."
+		"en"		"{GREEN}You have successfully purchased {PURPLE}{1} {GREEN}TBC points."
+	}
+}

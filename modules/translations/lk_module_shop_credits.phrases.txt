@@ -1,0 +1,10 @@
+"Phrases"
+{
+	//Chat
+	"Buy_Credits"
+	{
+		"#format"	"{1:i}"
+		"ru"		"{GREEN}Вы успешно купили {PURPLE}{1} {GREEN}SHOP кредитов."
+		"en"		"{GREEN}You have successfully purchased {PURPLE}{1} {GREEN}SHOP credits."
+	}
+}

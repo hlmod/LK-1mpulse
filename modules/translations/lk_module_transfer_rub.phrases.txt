@@ -1,0 +1,26 @@
+"Phrases"
+{
+	//Chat
+	"Player_Disconnect"
+	{
+		"ru"		"{GREEN}Игрок покинул игру"
+		"en"		"{GREEN}Player disconnect"
+	}
+	"No_Money"
+	{
+		"ru"		"{GREEN}Перевод не выолнен. Недостаточно средств на счете"
+		"en"		"{GREEN}The translation is not executed. Insufficient funds on the account"
+	}
+	"Transfer_from"
+	{
+		"#format"	"{1:N},{2:i}"
+		"ru"		"{GREEN}Вы перевили игроку {PURPLE}{1}{GREEN}, сумму: {LIGHTBLUE}{2} {GREEN}руб."
+		"en"		"{GREEN}You have transferred to the player {PURPLE}{1}{GREEN}, amount: {LIGHTBLUE}{2} {GREEN}rub."
+	}
+	"Transfer_to"
+	{
+		"#format"	"{1:N},{2:i}"
+		"ru"		"{GREEN}Вам поступил перевод от {PURPLE}{1}{GREEN}, сумма: {LIGHTBLUE}{2} {GREEN}руб."
+		"en"		"{GREEN}You received a transfer from {PURPLE}{1}{GREEN}, amount: {LIGHTBLUE}{2} {GREEN}rub."
+	}
+}

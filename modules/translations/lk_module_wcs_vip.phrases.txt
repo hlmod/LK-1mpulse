@@ -1,0 +1,15 @@
+"Phrases"
+{
+	//Chat
+	"Buy_WCSVIP"
+	{
+		"#format"	"{1:s},{2:s}"
+		"ru"		"{GREEN}Вы успешно купили - {PURPLE}{1}{GREEN}, окончание - {PURPLE}{2}"
+		"en"		"{GREEN}You have successfully purchased - {PURPLE}{1}{GREEN}, ending - {PURPLE}{2}"
+	}
+	"NoBuy_WCSVIP"
+	{
+		"ru"		"{GREEN}У вас уже есть WCS VIP, дождитесь окончания."
+		"en"		"{GREEN}You already have WCS VIP, wait until the end."
+	}
+}
